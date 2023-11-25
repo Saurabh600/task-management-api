@@ -7,6 +7,7 @@ import {
   taskAnalytics,
   updateTask,
 } from "../controllers/task";
+
 import { authChecker } from "../helpers/auth";
 
 const router = Router();

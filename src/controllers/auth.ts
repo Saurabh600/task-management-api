@@ -1,4 +1,4 @@
-import { Request, Response, json } from "express";
+import { Request, Response } from "express";
 import { compare } from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { User } from "../models/user";

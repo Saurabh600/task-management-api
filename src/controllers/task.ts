@@ -75,7 +75,7 @@ export const createNewTask = async (req: Request, res: Response) => {
 
 // delete task
 export const deleteTask = async (req: Request, res: Response) => {
-  const taskId = req.body.task_id;
+  const taskId = req.query.task_id;
 
   if (!taskId) {
     return res.status(400).json({
