@@ -22,7 +22,7 @@ export const getAllTasks = async (req: Request, res: Response) => {
 
 // get only one task for given user
 export const getOneTask = async (req: Request, res: Response) => {
-  const task_id = req.body.task_id;
+  const task_id = req.query.task_id;
 
   try {
     const tasks = await Task.findById(task_id);

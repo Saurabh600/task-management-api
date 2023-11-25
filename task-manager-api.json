@@ -1,0 +1,163 @@
+{
+  "info": {
+    "_postman_id": "654c1980-ebb5-4793-99f5-3e0eef35ca4f",
+    "name": "task-manager-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24468434"
+  },
+  "item": [
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "add user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Keshav Kumar\",\n    \"email\": \"keshav@gmail.com\",\n    \"password\": \"keshav123\",\n    \"dob\": \"07/11/2001\",\n    \"gender\": \"male\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/user/new",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "user", "new"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "user auth",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:4000/api/user/auth",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "user", "auth"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Task",
+      "item": [
+        {
+          "name": "new task",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"dhruv@gmail.com\",\n    \"password\": \"dhruv123\",\n    \"title\": \"Leetcode Contest 680\",\n    \"description\": \"Leetcode weekly contest 770, time: saturday evening\",\n    \"due_data\": \"01/12/2023\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/task/new",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "task", "new"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "all task",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRocnV2QGdtYWlsLmNvbSIsInVzZXJfaWQiOiI2NTYxZGU3MWUxY2NkMmNkNzA2MmIxNmIiLCJpYXQiOjE3MDA5MzExODcsImV4cCI6MTcwMDkzNDc4N30.qh9jHea13qvE-xsOZbP2LCiKQmiXjimyOT0m3w-Xn4A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/task/one?task_id=6561dffc657df6dcb64b1422",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "task", "one"],
+              "query": [
+                {
+                  "key": "task_id",
+                  "value": "6561dffc657df6dcb64b1422"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "task analytics",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRocnV2QGdtYWlsLmNvbSIsInVzZXJfaWQiOiI2NTYxZGU3MWUxY2NkMmNkNzA2MmIxNmIiLCJpYXQiOjE3MDA5MzExODcsImV4cCI6MTcwMDkzNDc4N30.qh9jHea13qvE-xsOZbP2LCiKQmiXjimyOT0m3w-Xn4A",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:4000/api/task/analytics",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "4000",
+              "path": ["api", "task", "analytics"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

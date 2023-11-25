@@ -14,8 +14,8 @@ const router = Router();
 // adding auth middleware
 router.use(authChecker);
 
+router.get("/one", getOneTask);
 router.get("/all", getAllTasks);
-router.get("/", getOneTask);
 router.put("/", updateTask);
 router.post("/new", createNewTask);
 router.delete("/", deleteTask);
