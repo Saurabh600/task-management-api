@@ -1,16 +1,15 @@
 {
   "name": "task-mananger-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A RESTful API for task management.",
   "scripts": {
-    "start": "npm start",
+    "start": "node dist/app.js",
     "build": "tsc",
     "dev": "ts-node-dev src/app.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Saurabh Chaudhary",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
