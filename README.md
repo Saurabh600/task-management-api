@@ -10,6 +10,7 @@ completed, and provide basic analytics on task completion.
 - Backend - ExpressJs framwork (Nodejs)
 - Database - MongoDB (with mongoose library)
 - bcryptjs for password security
+- jwt for authentication
 
 ## Project Setup
 
@@ -50,7 +51,7 @@ POST http://localhost:4000/api/user/new
 ```
 
 **NOTE: for authentication purpose for all api calls related to task need to have
-additional field of _email and password_ in their body**
+_jwt token_ in authentication headers**
 
 ### Create New Task
 
